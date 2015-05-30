@@ -1,8 +1,7 @@
-<div id="content" class="content">
-    <p>Main content.</p>
-    <p>
-        <a href="{{ url('erniuniu') }}">erNiuNiu!</a>
-    </p>
+<link rel="stylesheet" href="{{ asset('css/main.css') }}"/>
+
+<div id="main" class="content">
+    <p>Main content. Check out <a href="{{ url('erniuniu') }}">erNiuNiu</a>!</p>
 </div>
 
 {{ render(controller('AppBundle:Content:bottom')) }}
