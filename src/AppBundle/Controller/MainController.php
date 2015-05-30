@@ -9,10 +9,19 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class MainController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="home")
      * @Template()
      */
     public function indexAction()
+    {
+        return [];
+    }
+
+    /**
+     * @Route("/erniuniu", name="erniuniu")
+     * @Template()
+     */
+    public function erniuniuAction()
     {
         return [];
     }
