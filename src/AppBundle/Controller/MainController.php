@@ -25,4 +25,13 @@ class MainController extends Controller
     {
         return [];
     }
+
+    /**
+     * @Route("/jibaGong/{hobby}", name="jibagong")
+     * @Template()
+     */
+    public function jibagongAction($hobby)
+    {
+        return compact('hobby');
+    }
 }
