@@ -34,4 +34,12 @@ class MainController extends Controller
     {
         return compact('hobby');
     }
+
+    /**
+     * @Route("/jiiis", name="jiiis")
+     */
+    public function jiiisAction()
+    {
+        return $this->redirectToRoute('jibagong', ['hobby' => 'basketball']);
+    }
 }
