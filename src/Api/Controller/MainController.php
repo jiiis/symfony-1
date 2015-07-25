@@ -43,4 +43,13 @@ class MainController extends Controller
             ]
         ];
     }
+
+    /**
+     * @Route("/test-request-in-twig", name="test_request_in_twig")
+     * @Template()
+     */
+    public function testRequestInTwigAction()
+    {
+        return [];
+    }
 }
