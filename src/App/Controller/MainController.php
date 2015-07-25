@@ -5,6 +5,7 @@ namespace App\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class MainController extends Controller
 {
@@ -41,6 +42,18 @@ class MainController extends Controller
     public function jiiisAction()
     {
         return $this->redirectToRoute('jibagong', ['hobby' => 'basketball']);
+    }
+
+    /**
+     * @Route("/forbidden", name="forbidden")
+     */
+    public function forbiddenAction(Request $request)
+    {
+        $this->addFlash('notice', 'It\'s a forbidden area you are requesting.');
+
+        $referer = $request->headers->get('referer');
+
+        return $this->redirect($referer);
     }
 
     /**
