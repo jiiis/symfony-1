@@ -1,6 +1,9 @@
+{% set session_name = app.request.query.get('session_name') %}
 <div>
     <p>This is erNiuNiu!!!</p>
     <p>
         <a href="{{ path('home') }}">Home</a>
     </p>
+
+    <p>Session: {{ session_name }} => {{ app.request.session.get(session_name) }}</p>
 </div>
