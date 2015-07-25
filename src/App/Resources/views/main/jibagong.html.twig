@@ -1,9 +1,13 @@
-<div>
-    <p>This is jibaGong!!!</p>
-    <p>
-        jibaGong's hobby is {{ hobby }}.
-    </p>
-    <p>
-        <a href="{{ path('home') }}">Home</a>
-    </p>
-</div>
+{%- extends 'App::layout.html.twig' -%}
+
+{%- block content -%}
+    <div>
+        <p>This is jibaGong!!!</p>
+        <p>
+            jibaGong's hobby is {{ hobby }}.
+        </p>
+        <p>
+            <a href="{{ path('home') }}">Home</a>
+        </p>
+    </div>
+{%- endblock -%}
