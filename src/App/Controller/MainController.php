@@ -42,4 +42,20 @@ class MainController extends Controller
     {
         return $this->redirectToRoute('jibagong', ['hobby' => 'basketball']);
     }
+
+    /**
+     * @Route("/example-404", name="example_404")
+     */
+    public function error404Action()
+    {
+        throw $this->createNotFoundException('A 404 example page.');
+    }
+
+    /**
+     * @Route("/example-500", name="example_500")
+     */
+    public function error500Action()
+    {
+        throw new \Exception('A 500 example page.');
+    }
 }
